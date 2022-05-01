@@ -1,0 +1,8 @@
+frame = cv2.imread('.jpg')
+frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+frame= cv2.copyMakeBorder(frame, 50, 50, 50, 50, cv2.BORDER_CONSTANT, (0,0,0))
+frame=integral_image(frame)
+frame = frame/np.amax(frame)
+frame = np.clip(frame, 0,255)
+plt.imshow(frame)
+print(sample.size)
